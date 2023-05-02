@@ -320,7 +320,9 @@ h1 {
     font-size: 1rem;
     width: auto;
   }
-
+  .about-content :nth-child(3) {
+    order: -4;
+  }
   .contact-me-container {
     padding: 10% 0;
   }
