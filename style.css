@@ -10,9 +10,13 @@ a {
   display: flex;
   color: #ffe6c7;
   transition: 0.3s;
+  text-decoration: none;
 }
 a:hover {
   color: #ff6000;
+}
+p {
+  font-size: 1.2rem;
 }
 html {
   scroll-behavior: smooth;
@@ -27,14 +31,14 @@ body {
   font-family: "Bruno Ace", cursive;
 }
 .button-style {
+  font-size: 1rem;
   color: #ffe6c7;
   background-color: unset;
   border-radius: 4px;
   border-style: none;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
-  font-size: 95%;
+  font-family: "Bruno Ace", cursive;
   font-weight: 700;
   line-height: 1.5;
   margin: 0;
@@ -63,19 +67,18 @@ body {
   align-items: center;
 }
 .presentation-btn-container {
-  padding-top: 3%;
-  font-size: 1.3rem;
+  padding-top: 7%;
   width: 90%;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
 }
 .presentation-content {
-  line-height: 3rem;
+  height: 30%;
   width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: left;
 }
 h1 {
@@ -98,7 +101,7 @@ h1 {
   border-right: 5px solid white;
   transform: rotate(45deg);
   margin: -10px;
-  animation: animate 10git gs;
+  animation: animate 2s infinite;
 }
 
 .projects-container {
@@ -137,6 +140,10 @@ h1 {
   color: #ffe6c7;
   display: flex;
 }
+.project-card-image-responsive {
+  display: none;
+}
+
 .project-card-content > img {
   border-radius: 3%;
   width: 40%;
@@ -146,21 +153,24 @@ h1 {
   rotate: 10deg;
   scale: 1.05;
 }
-.project-card-text h2 {
-  text-transform: capitalize;
-}
+
 .project-card-text {
-  line-height: 1.7rem;
-  width: 47%;
+  gap: 20px;
+  width: 55%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: left;
 }
 
-.resume-btn {
+.project-card-text h2 {
+  text-transform: capitalize;
+}
+.project-card-icons {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  width: 50%;
+  font-size: 3rem;
+  justify-content: space-between;
 }
 .about-me-container {
   padding-top: 4%;
@@ -172,18 +182,45 @@ h1 {
   flex-direction: column;
 }
 .about-content {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: justify;
+  flex-wrap: wrap;
 }
 .about-content p {
-  width: 50%;
+  width: 65%;
 }
 .about-content > img {
-  width: 40%;
+  width: 32%;
   border-radius: 50%;
+}
+.about-content a {
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  animation: resume-animate 2s infinite;
+}
+.about-content a:hover {
+  background-color: coral;
+}
+.contact-me-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-me-icons {
+  width: 20%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact-me-icons a {
+  font-size: 40px;
 }
 @keyframes animate {
   0% {
@@ -192,5 +229,103 @@ h1 {
   }
   50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes resume-animate {
+  0% {
+    color: #f5bd79;
+  }
+  50% {
+    color: #ffe6c7;
+  }
+  100% {
+    color: #f5bd79;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .presentation {
+    justify-content: space-around;
+  }
+  .presentation-btn-container {
+    padding-top: 20%;
+  }
+
+  .presentation-content p {
+    font-size: 1.2rem;
+  }
+  .arrow {
+    width: 4vw;
+    height: 4vw;
+  }
+  .project-card {
+    width: 80%;
+  }
+  .project-card-content {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project-card-image {
+    display: none;
+  }
+  .project-card-image-responsive {
+    display: block;
+  }
+  .project-card-content img {
+    width: 100%;
+  }
+
+  .project-card-text h2 {
+    text-align: center;
+  }
+
+  .project-card-text {
+    gap: 20px;
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .project-card-text span {
+    display: none;
+  }
+  .about-me-container {
+    height: auto;
+  }
+  .about-content {
+    width: 80%;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .about-content img {
+    width: 70%;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    width: auto;
+  }
+  .about-content :nth-child(3) {
+    order: -4;
+  }
+  .contact-me-container p {
+    width: 80%;
+    font-size: 1rem;
+  }
+  .contact-me-container {
+    padding-top: 15%;
+  }
+  .contact-me-icons {
+    width: 100%;
   }
 }

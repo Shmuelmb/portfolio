@@ -3,8 +3,7 @@ function scrollToProjects() {
   window.scrollTo(0, height);
 }
 function scrollToAbout() {
-  const height = window.innerHeight;
-  window.scrollTo(0, height * 2);
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 const projectsScrollBtns = document.querySelectorAll(".scroll-to-projects");
