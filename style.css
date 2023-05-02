@@ -160,13 +160,16 @@ h1 {
   flex-direction: column;
   text-align: left;
 }
-
+.project-card-text div {
+  align-items: center;
+}
 .project-card-text h2 {
   text-transform: capitalize;
 }
 .project-card-icons {
+  align-self: center;
   display: flex;
-  width: 50%;
+  width: 30%;
   font-size: 3rem;
   justify-content: space-between;
 }
@@ -295,6 +298,9 @@ h1 {
 
   .project-card-text span {
     display: none;
+  }
+  .project-card-icons {
+    width: 50%;
   }
   .about-me-container {
     padding-top: 30%;
