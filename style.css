@@ -22,6 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  min-height: 100vh;
   background-color: #322b2b;
   color: #ffe6c7;
   text-align: center;
@@ -31,7 +32,7 @@ body {
   font-family: "Bruno Ace", cursive;
 }
 .button-style {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ffe6c7;
   background-color: unset;
   border-radius: 4px;
@@ -39,8 +40,6 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   font-family: "Bruno Ace", cursive;
-  font-weight: 700;
-  line-height: 1.5;
   margin: 0;
   max-width: none;
   outline: none;
@@ -159,7 +158,6 @@ h1 {
   width: 55%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: left;
 }
 
@@ -299,10 +297,11 @@ h1 {
     display: none;
   }
   .about-me-container {
+    padding-top: 30%;
     height: auto;
   }
   .about-content {
-    width: 80%;
+    width: 87%;
     flex-direction: column-reverse;
     gap: 20px;
   }
@@ -310,21 +309,20 @@ h1 {
   .about-content img {
     width: 70%;
   }
-
   .about-content p {
+    text-align: justify;
     font-size: 1rem;
     width: auto;
   }
-  .about-content :nth-child(3) {
-    order: -4;
+
+  .contact-me-container {
+    padding: 10% 0;
   }
   .contact-me-container p {
-    width: 80%;
+    width: 84%;
     font-size: 1rem;
   }
-  .contact-me-container {
-    padding-top: 15%;
-  }
+
   .contact-me-icons {
     width: 100%;
   }
